@@ -6,13 +6,13 @@
     <LLVMInstallDir>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\LLVM\LLVM)</LLVMInstallDir>
     <LLVMInstallDir Condition="'$(LLVMInstallDir)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\LLVM\LLVM)</LLVMInstallDir>
     <ExecutablePath>$(LLVMInstallDir)\msbuild-bin;$(ExecutablePath)</ExecutablePath>
-    <LibraryPath>$(LLVMInstallDir)\lib\clang\9.0.0\lib\windows;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(LLVMInstallDir)\lib\clang\10.0.0\lib\windows;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
 
   <ItemDefinitionGroup>
     <ClCompile>
       <!-- Set the value of _MSC_VER to claim for compatibility -->
-      <AdditionalOptions>-m32 -fmsc-version=1921 -fno-delayed-template-parsing -march=native -mmmx -msse -msse2 -msse3 -msse4.1 -msse4.2 -maes -mavx -mavx2 -mbmi -mbmi2 -mpopcnt -mf16c -mxsaveopt -mlzcnt -mfma -mpclmul -mxsave -mrdrnd -mfxsr -madx -Xclang -std=c++17 -Xclang -faligned-allocation -Xclang -pedantic -Xclang -ffast-math -Xclang -fcolor-diagnostics -Xclang -fcoroutines-ts -Xclang -ffine-grained-bitfield-accesses -Xclang -ffixed-point -Xclang -fmodules -Xclang -fmodules-ts -Xclang -fsized-deallocation -Qunused-arguments -Wno-unused-function -Wno-unused-variable -Wno-language-extension-token -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-ignored-pragmas -Wno-unused-private-field -Wno-unused-command-line-argument -Wno-gnu-anonymous-struct -Wno-nested-anon-types %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-m32 -fmsc-version=1922 -fno-delayed-template-parsing -march=native -mmmx -msse -msse2 -msse3 -msse4.1 -msse4.2 -maes -mavx -mavx2 -mbmi -mbmi2 -mpopcnt -mf16c -mxsaveopt -mlzcnt -mfma -mpclmul -mxsave -mrdrnd -mfxsr -madx -Xclang -faligned-allocation -Xclang -pedantic -Xclang -ffast-math -Xclang -fcolor-diagnostics -Xclang -fcoroutines-ts -Xclang -ffine-grained-bitfield-accesses -Xclang -ffixed-point -Xclang -fmodules -Xclang -fmodules-ts -Xclang -fsized-deallocation -Qunused-arguments -Wno-unused-function -Wno-unused-variable -Wno-language-extension-token -Wno-deprecated-declarations -Wno-unknown-pragmas -Wno-ignored-pragmas -Wno-unused-private-field -Wno-unused-command-line-argument -Wno-gnu-anonymous-struct -Wno-nested-anon-types %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
   </ItemDefinitionGroup>
 </Project>

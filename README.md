@@ -1,2 +1,4 @@
+
 # Clang.Props
-LLVM "Old" Config
+
+LLVM "Old Style" Config
